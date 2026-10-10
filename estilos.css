@@ -1,0 +1,85 @@
+
+/*Estilos generales*/
+body{
+    margin:0;
+}
+/*Estilos del encabezado*/
+header{
+      /* width es que tan ancho sera el encabezado y height es que tan alto es el encabezado*/
+    width:100%;
+    height: 180px;
+}
+header img{
+    /*Aplica lo mismo que el anterior sin embargo este modifica la imagen que esta en el encabezado*/
+    width:100%;
+    height: 180px;
+    object-fit: cover;
+}
+/*Estilos de programa*/
+nav{
+    background-color: rgb(86, 170, 219);
+}
+nav ul{
+    list-style: none;
+    margin:0;
+    padding: 0;
+}
+nav > ul{
+    display: flex;
+}
+nav > ul{
+    position: relative;
+}
+nav a {
+    display: block;
+    color:lavenderblush;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+nav a:hover{
+    /*Cuando se pase el mouse por arriva cambia de color lo que selecciones*/
+    background-color: #4992d6
+}
+nav li ul{
+    display:none;
+    position:absolute;
+    background-color: cornflowerblue;
+    min-width:180px;
+    
+}
+nav li:hover ul{
+    display: block;
+}
+/*Estilos del pie de pagina*/
+footer{
+    background-color: lightblue;
+    color: beige;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+footer img{
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+/*Estilos para el cuerpo de pagina*/
+section{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    min-width: 350px;
+
+}
+.principal{
+    width: 70%;
+    background-color: #4992d6;
+    padding: 20px;
+    border: 2px solid #04122e;
+}
+.secundario{
+    width: 30%;
+    background-color: #4992d6;
+    padding: 20px;
+    border: 2px solid #04122e;
+}
