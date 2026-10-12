@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Práctica de Posiciones CSS</title>
+        <!-- Hacemos referencia a los estilos generales de tu página -->
+        <link rel="stylesheet" href="estilos.css">
+        <!-- Hacemos referencia a los estilos específicos de esta práctica -->
+        <link rel="stylesheet" href="estilos_posiciones.css">
+    </head>
+    <body>
+        <header><img src="fondo.jpg" alt="Encabezado"></header>
+        
+        <!-- Menú de navegación -->
+        <nav>
+            <ul>
+                <li><a href="#">Conóceme</a>
+                    <ul>
+                        <li><a href="Informacion.html">Información personal</a></li>
+                        <li><a href="Pasatiempos.html">Pasatiempos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Segunda parcial</a>
+                    <ul>
+                        <li><a href="Practica1.html">Práctica uno</a></li>
+                        <li><a href="Posiciones.HTML">Práctica de posiciones</a></li>
+                        <li><a href="MundoDigital.HTML">Mi mundo digital</a></li>
+                        <li><a href="Practica Posiciones.html">Práctica posiciones</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Tercer parcial</a>
+                    <ul>
+                        <li><a href="tercer_practica1.html">Práctica uno</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Elemento de prueba con Position Fixed -->
+        <div class="box-fixed-demo">
+            Fixed (Fijo)
+        </div>
+
+        <section>
+            <aside class="principal">
+                <h1>Práctica de Posiciones en CSS</h1>
+                <p>En este apartado se exploran y explican los 5 valores principales de la propiedad <code>position</code> en CSS y sus propiedades auxiliares (<code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> y <code>z-index</code>).</p>
+
+                <!-- 1. Position: Static -->
+                <article>
+                    <h2>1. Position: Static</h2>
+                    <p>Es el valor por defecto de todos los elementos HTML. Los elementos se colocan siguiendo el flujo normal del documento. Las propiedades auxiliares como <code>top</code> o <code>left</code> no tienen ningún efecto en elementos estáticos.</p>
+                    <img src="Static.png" alt="Demostración de Position: Static">
+                    <p><strong>Demostración en vivo:</strong></p>
+                    <div class="demo-box box-static">Static</div>
+                </article>
+
+                <hr>
+
+                <!-- 2. Position: Relative -->
+                <article>
+                    <h2>2. Position: Relative</h2>
+                    <p>Mantiene al elemento en el flujo normal, pero permite desplazarlo en relación con su posición original utilizando las propiedades auxiliares (<code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>). El espacio original del elemento se mantiene reservado.</p>
+                    <img src="Relative.png" alt="Demostración de Position: Relative">
+                    <p><strong>Demostración en vivo (desplazado 15px arriba y 40px izquierda):</strong></p>
+                    <div class="demo-box box-relative">Relative</div>
+                </article>
+
+                <hr>
+
+                <!-- 3. Position: Absolute -->
+                <article>
+                    <h2>3. Position: Absolute</h2>
+                    <p>Saca al elemento del flujo normal del documento. Se posiciona de forma relativa a su contenedor ancestro más cercano que tenga una posición distinta a <code>static</code>. Si no existe tal contenedor, se ubica respecto al elemento <code>&lt;html&gt;</code>.</p>
+                    <img src="Absolute.png" alt="Demostración de Position: Absolute">
+                    <p><strong>Demostración en vivo (posicionado abajo a la derecha de su contenedor):</strong></p>
+                    <div class="demo-container-relative">
+                        <span>Contenedor Relativo (Padre)</span>
+                        <div class="demo-box box-absolute">Absolute</div>
+                    </div>
+                </article>
+
+                <hr>
+
+                <!-- 4. Position: Fixed -->
+                <article>
+                    <h2>4. Position: Fixed</h2>
+                    <p>Al igual que <code>absolute</code>, se remueve del flujo normal, pero se posiciona de manera fija en relación con la ventana del navegador (viewport). Esto significa que el elemento se mantendrá en el mismo lugar incluso al desplazar (scroll) la página.</p>
+                    <img src="Fixed.png" alt="Demostración de Position: Fixed">
+                    <p><em>(Puedes observar la caja roja fija en la esquina inferior derecha de la pantalla como ejemplo en vivo).</em></p>
+                </article>
+
+                <hr>
+
+                <!-- 5. Position: Sticky y Z-Index -->
+                <article>
+                    <h2>5. Position: Sticky y Propiedad Z-Index</h2>
+                    <p><code>position: sticky</code> es una combinación de <code>relative</code> y <code>fixed</code>. Se comporta como relativo hasta que alcanza un límite de desplazamiento especificado (<code>top: 10px</code>), momento en el cual se vuelve fijo.</p>
+                    <img src="Sticky.png" alt="Demostración de Position: Sticky">
+                    <p><strong>Demostración Sticky en vivo:</strong></p>
+                    <div class="demo-box box-sticky">Sticky</div>
+
+                    <p>Por otro lado, <code>z-index</code> determina el orden de superposición vertical de los elementos (eje Z). A mayor valor de <code>z-index</code>, más enfrente aparecerá el elemento.</p>
+                    
+                    <p><strong>Demostración Z-Index en vivo (caja azul con z-index: 2 sobre caja oscura con z-index: 1):</strong></p>
+                    <div class="z-container">
+                        <div class="demo-box z-box1">Z-Index: 1</div>
+                        <div class="demo-box z-box2">Z-Index: 2</div>
+                    </div>
+                </article>
+            </aside>
+
+            <aside class="secundario">
+                <h2>Temas abordados<br></h2>
+                1. Position: Static<br>
+                2. Position: Relative<br>
+                3. Position: Absolute<br>
+                4. Position: Fixed<br>
+                5. Position: Sticky<br>
+                6. Propiedad Z-Index
+            </aside>
+        </section>
+
+        <footer>
+            <img src="logo_ucol.jpg" alt="Logo Universidad de Colima">
+            <div>
+                <p><strong>Universidad de Colima</strong></p>
+                <p>Bachillerato 8</p>
+                <p>Programación en Internet I</p>
+            </div>
+        </footer>
+    </body>
+</html>
