@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de evaluación de calificaciones</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header><img src="fondo.jpg"></header>
+    <nav>
+        <ul>
+            <li><a href="#">Conoceme</a>
+                <ul>
+                    <li><a href="Informacion.html">Informacion personal</a></li>
+                    <li><a href="Pasatiempos.html">pasatiempos</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Segunda parcial</a>
+                <ul>
+                    <li><a href="Practica1.html">Práctica uno</a></li>
+                    <li><a href="Posiciones.HTML">Posiciones en HTML</a></li>
+                    <li><a href="MundoDigital.HTML">Mi mundo digital</a></li>
+                    <li><a href="Practica Posiciones.html">Práctica posiciones</a></li>
+                    <li><a href="comunidad.HTML">comunidad</a></li>
+                    <li><a href="temperaturas.html">temperaturas</a></li>
+                    <li><a href="calificaciones.html">calificaciones</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Tercer parcial</a></li>
+        </ul>
+    </nav>
+    <section>
+        <aside class="principal">
+            <h1>Sistema de evaluación de calificaciones</h1>
+            <p>Ingresa los datos del estudiante y sus tres calificaciones para calcular su promedio.</p>
+            
+            <!-- Formulario de calificaciones -->
+            <label for="nombre">Nombre del estudiante:</label>
+            <input type="text" id="nombre"><br><br>
+
+            <label for="cal1">Primera calificación:</label>
+            <input type="number" id="cal1"><br><br>
+
+            <label for="cal2">Segunda calificación:</label>
+            <input type="number" id="cal2"><br><br>
+
+            <label for="cal3">Tercera calificación:</label>
+            <input type="number" id="cal3"><br><br>
+
+            <button type="button" onclick="calcularPromedio()">Calcular promedio</button><br><br>
+
+            <div id="mostrar_resultado">Resultados:</div>
+        </aside>
+    </section>
+    <footer>
+        <img src="logo_ucol.jpg">
+
+        <div> 
+            <p><strong>Universidad de Colima</strong></p>
+            <p>Bachillerato 8</p>
+            <p>Programación en Internet I</p>
+        </div>
+    </footer>
+
+    <!-- Enlace al archivo de JavaScript externo -->
+    <script src="calificaciones.js"></script>
+</body>
+</html>
